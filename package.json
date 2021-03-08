@@ -1,0 +1,24 @@
+{
+  "name": "WonderGames",
+  "version": "1.0.0",
+  "description": "A java script game website where you can play number of games\r ## Website can be seen at https://alpha-beeta.web.app/",
+  "main": "index.html",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "wonderGames" : "http-server"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Navneet-chaurasia/WonderGames.git"
+  },
+  "keywords": [],
+  "author": "Navneet chaurasia <navneetc486@gmail.com>",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Navneet-chaurasia/WonderGames/issues"
+  },
+  "homepage": "https://github.com/Navneet-chaurasia/WonderGames#readme",
+  "dependencies": {
+    "http-server": "^0.12.3"
+  }
+}
