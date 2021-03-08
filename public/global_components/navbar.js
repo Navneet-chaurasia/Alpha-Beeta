@@ -19,7 +19,14 @@ class NavBar {
 
     static render(){
 
-        return  `<div id="navbar" style="height:50px; background-color:grey;position :static"></div>`;
+        return  `
+        <style>
+        #navbar{
+            height:50px;
+            background-color:grey;
+        }
+        </style>
+        <div id="navbar" ></div>`;
     }
 
 }
