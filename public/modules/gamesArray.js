@@ -2,7 +2,7 @@
 //whenever anyone will add a game he/she must register entry here
 
 
-class GamesArray{
+export class GamesArray{
  
     static allGames = [
         {
@@ -10,7 +10,22 @@ class GamesArray{
             'version': 1.0,
             'category': "timepass",
             'createdAt': Date.now,
-            'coverImage': "public/assets/gameCoverImages/snakeGame.jpg"
+            'coverImage': "assets/gameCoverImages/snakeGame.jpg"
+        },
+        {
+            'name': "Fucking Snake Game",
+            'version': 1.0,
+            'category': "timepass",
+            'createdAt': Date.now,
+            'coverImage': "assets/gameCoverImages/snakeGame.jpg"
+        },
+        {
+            'name': "Hunger Games",
+            'version': 1.0,
+            'category': "timepass",
+            'createdAt': Date.now,
+            'coverImage': "assets/gameCoverImages/snakeGame.jpg"
         }
+
     ]
 }

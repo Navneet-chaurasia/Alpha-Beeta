@@ -15,21 +15,40 @@
     <!-- initialize the SDK after all desired features are loaded -->
     <script defer src="/__/firebase/init.js"></script>
 
-
+<link href="index.css" rel="stylesheet">
     <!-- place all component scripts here -->
 
-<script ></script>
+<script src="global_components/NavBar/navbar.js" type="text/javascript" defer></script>
+<script src="global_components/Footer/footer.js" type="text/javascript" defer></script>
+<script src="global_components/gameCard/gameCard.js" type="text/javascript" defer></script>
+
+
   </head>
   <body>
      
     <!-- navbar component-->
-  <script type="module"> 
-  import {NavBar } from "/global_components/NavBar/navbar.js";
-  
-  //NavBar component
-     NavBar.render ();
- 
-  </script>
+    <nav-bar title="Wonder Games"></nav-bar>
+    <main>
+      <div id="games" > </div>
+     
+    </main>
+    <footer-component ></footer-component>
   
   </body>
+
+    <script type="module">
+      import {GamesArray} from '/modules/gamesArray.js'
+     window.onload = function(){
+      var gamesDiv = document.getElementById('games');
+    var res = '';
+        for(let i = 0; i < GamesArray.allGames.length; i++){
+         res += '<game-card  name="'+ GamesArray.allGames[i].name+'" imageUrl="'+ GamesArray.allGames[i].coverImage+'", category="'+GamesArray.allGames[i].category+'" href="facebook.com"></game-card>';
+        }
+
+        gamesDiv.innerHTML = res;
+     } 
+
+     
+    </script>
+  
 </html>

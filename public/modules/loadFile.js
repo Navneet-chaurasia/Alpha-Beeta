@@ -9,10 +9,7 @@ export function loadFile(file)
             if(rawFile.status === 200 || rawFile.status == 0)
             {
                 var allText = rawFile.responseText;
-                document.open();
-                document.write(allText)
-                document.close();
-               
+            
                 return allText;
             }
         }
