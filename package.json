@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "description": "A java script game website where you can play number of games\r ## Website can be seen at https://alpha-beeta.web.app/",
   "main": "index.html",
+  "type": "module",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "wonderGames": "http-server"
