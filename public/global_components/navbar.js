@@ -51,7 +51,7 @@ class NavBar {
         <div class="topnav">
   <a class="active" href="#home">Wonder-Games</a>
   <a href="#news">News</a>
-  <a href="#contact">Contact</a>
+  <a href="#contact">Contact me</a>
   <a href="#about">About</a>
   <div class="topnav-right">
     <a href="#profile">Your Profile</a>
