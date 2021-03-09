@@ -14,12 +14,12 @@ This is a prefered method of creating components
 class NavBar {
 
 
-    
 
 
-    static render(){
 
-        return  `
+    static render() {
+
+        return `
         <style>
         .topnav {
             background-color: blue;
@@ -53,6 +53,9 @@ class NavBar {
   <a href="#news">News</a>
   <a href="#contact">Contact</a>
   <a href="#about">About</a>
+  <div class="topnav-right">
+    <a href="#profile">Your Profile</a>
+  </div>
 </div>`;
     }
 
