@@ -17,11 +17,19 @@
 
 
     <!-- place all component scripts here -->
-<script  src="global_components/navbar.js"> </script>
+
+<script ></script>
   </head>
   <body>
      
     <!-- navbar component-->
-  <script>document.write(NavBar.render())</script>
+  <script type="module"> 
+  import {NavBar } from "/global_components/NavBar/navbar.js";
+  
+  //NavBar component
+     NavBar.render ();
+ 
+  </script>
+  
   </body>
 </html>
