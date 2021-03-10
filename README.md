@@ -1,5 +1,5 @@
 # WonderGames
-A java script game website where you can play number of games
+A game website where you can play number of games.
 ## Website can be seen at https://alpha-beeta.web.app/
 
 
@@ -12,4 +12,4 @@ A java script game website where you can play number of games
 
 
 
-## Happy coding
+### WonderGames is a Open Source project. Feel free to contribute. All PRs are welcome.
