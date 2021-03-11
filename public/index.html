@@ -42,7 +42,7 @@
       var gamesDiv = document.getElementById('games');
     var res = '';
         for(let i = 0; i < GamesArray.allGames.length; i++){
-         res += '<game-card  name="'+ GamesArray.allGames[i].name+'" imageUrl="'+ GamesArray.allGames[i].coverImage+'", category="'+GamesArray.allGames[i].category+'" href="facebook.com"></game-card>';
+         res += '<game-card  name="'+ GamesArray.allGames[i].name+'" imageUrl="'+ GamesArray.allGames[i].coverImage+'", category="'+GamesArray.allGames[i].category+'" href="'+GamesArray.allGames[i].href+'"></game-card>';
         }
 
         gamesDiv.innerHTML = res;
