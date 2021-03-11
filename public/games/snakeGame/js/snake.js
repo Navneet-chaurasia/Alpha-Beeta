@@ -15,13 +15,13 @@ const down = new Audio();
 const right = new Audio();
 const left = new Audio();
 
-foodImg.src = "food.png";
-dead.src = "dead.mp3";
-eat.src = "eat.mp3";
-up.src = "up.mp3";
-down.src = "down.mp3";
-right.src = "right.mp3";
-left.src = "left.mp3";
+foodImg.src = "assets/images/food.png";
+dead.src = "assets/sounds/dead.mp3";
+eat.src = "assets/sounds/eat.mp3";
+up.src = "assets/sounds/up.mp3";
+down.src = "assets/sounds/down.mp3";
+right.src = "assets/sounds/right.mp3";
+left.src = "assets/sounds/left.mp3";
 
 let score = 0;
 let dir;
