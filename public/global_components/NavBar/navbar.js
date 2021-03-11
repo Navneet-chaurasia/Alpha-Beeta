@@ -34,11 +34,15 @@ class NavBar extends HTMLElement {
           <link href="global_components/NavBar/navbar.css" rel="stylesheet">
           <header>
             <nav>
-              <ul>
-              <li id="title">`+title+`</li>
-                <li><a href="about.html">About</a></li>
-                <li><a href="work.html">Work</a></li>
-                <li><a href="contact.html">Contact</a></li>
+            <p id="title">`+title+`</p>
+
+            <input type="text" id="search_bar" placeholder="Search Games..">
+
+              <ul id="vertical-menu">
+              
+                <li><a href="#">Trending Games</a></li>
+                <li><a href="#">Leaderboard</a></li>
+                <li><a href="#">Profile</a></li>
               </ul>
             </nav>
           </header>
