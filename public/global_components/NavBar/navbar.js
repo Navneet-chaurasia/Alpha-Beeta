@@ -10,6 +10,20 @@ This is a prefered method of creating components
 */
 
 
+var shadow;
+ //this method is for reponsiveness of navbar
+ function myFunction(){
+  
+ var x = shadow.getElementById('myTopnav');
+ if (x.className === "topnav") {
+   x.className += " responsive";
+ } else {
+   x.className = "topnav";
+ }
+
+    
+    
+}
 
 
 
@@ -19,6 +33,9 @@ class NavBar extends HTMLElement {
         super();
       }
        
+
+      //shadow root for navbar element
+
       connectedCallback() {
    
         const headerTemplate = document.createElement('template');
@@ -33,78 +50,43 @@ class NavBar extends HTMLElement {
         headerTemplate.innerHTML = `
        
           <link rel="stylesheet" href="global_components/NavBar/navbar.css">
-          <script src="https://kit.fontawesome.com/a076d05399.js"></script>
-       
-    
-          <div class="wrapper">
-            <nav>
-              <input type="checkbox" id="show-search">
-              <input type="checkbox" id="show-menu">
-              <label for="show-menu" class="menu-icon"><i class="fas fa-bars"></i></label>
-              <div class="content">
-              <div class="logo"><a href="#">WonderGames</a></div>
-                <ul class="links">
-                  <li><a href="#">Home</a></li>
-                  <li><a href="#">About</a></li>
-                  <li>
-                    <a href="#" class="desktop-link">Features</a>
-                    <input type="checkbox" id="show-features">
-                    <label for="show-features">Features</label>
-                    <ul>
-                      <li><a href="#">Drop Menu 1</a></li>
-                      <li><a href="#">Drop Menu 2</a></li>
-                      <li><a href="#">Drop Menu 3</a></li>
-                      <li><a href="#">Drop Menu 4</a></li>
-                    </ul>
-                  </li>
-                  <li>
-                    <a href="#" class="desktop-link">Services</a>
-                    <input type="checkbox" id="show-services">
-                    <label for="show-services">Services</label>
-                    <ul>
-                      <li><a href="#">Drop Menu 1</a></li>
-                      <li><a href="#">Drop Menu 2</a></li>
-                      <li><a href="#">Drop Menu 3</a></li>
-                      <li>
-                        <a href="#" class="desktop-link">More Items</a>
-                        <input type="checkbox" id="show-items">
-                        <label for="show-items">More Items</label>
-                        <ul>
-                          <li><a href="#">Sub Menu 1</a></li>
-                          <li><a href="#">Sub Menu 2</a></li>
-                          <li><a href="#">Sub Menu 3</a></li>
-                        </ul>
-                      </li>
-                    </ul>
-                  </li>
-                  <li><a href="#">Feedback</a></li>
-                </ul>
+          
+
+                  
+            <div class="topnav" id="myTopnav">
+            <a href="#home" class="active">Home</a>
+            <a href="#news">News</a>
+            <a href="#contact">Contact</a>
+            <div class="dropdown">
+              <button class="dropbtn">Dropdown 
+                <i class="fa fa-caret-down"></i>
+              </button>
+              <div class="dropdown-content">
+                <a href="#">Link 1</a>
+                <a href="#">Link 2</a>
+                <a href="#">Link 3</a>
               </div>
-              <label for="show-search" class="search-icon"><i class="fas fa-search"></i></label>
-              <form action="#" class="search-box">
-                <input type="text" placeholder="Type Something to Search..." required>
-                <button type="submit" class="go-icon"><i class="fas fa-long-arrow-alt-right"></i></button>
-              </form>
-            </nav>
-          </div>
-        
+            </div> 
+            <a href="#about">About</a>
+            <a href="javascript:void(0);" style="font-size:15px;" class="icon" onclick='myFunction()'>  &#9776;</a>
+            </div>
+
+            
+
         `;
 
 
+      shadow = this.attachShadow({ mode: 'open' });
+      
+    shadow.appendChild(headerTemplate.content);
 
-
-
-        //these two lines are important
-        const shadowRoot = this.attachShadow({ mode: 'closed' });
-        shadowRoot.appendChild(headerTemplate.content);
-       
+    
       }
     
       
      
 
-     
-     
+
 }
 
 customElements.define('nav-bar',NavBar);
