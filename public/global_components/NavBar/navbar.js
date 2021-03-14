@@ -10,9 +10,20 @@ This is a prefered method of creating components
 */
 
 
+var shadow;
+ //this method is for reponsiveness of navbar
+ function myFunction(){
+  
+ var x = shadow.getElementById('myTopnav');
+ if (x.className === "topnav") {
+   x.className += " responsive";
+ } else {
+   x.className = "topnav";
+ }
 
- //these two lines are important
-var shadow ;
+    
+    
+}
 
 
 
@@ -57,7 +68,7 @@ class NavBar extends HTMLElement {
               </div>
             </div> 
             <a href="#about">About</a>
-            <a href="javascript:void(0);" style="font-size:15px;" class="icon" onclick=new NavBar().myFunction()'>  &#9776;</a>
+            <a href="javascript:void(0);" style="font-size:15px;" class="icon" onclick='myFunction()'>  &#9776;</a>
             </div>
 
             
@@ -65,7 +76,8 @@ class NavBar extends HTMLElement {
         `;
 
 
-        shadow = this.attachShadow({ mode: 'open' });
+      shadow = this.attachShadow({ mode: 'open' });
+      
     shadow.appendChild(headerTemplate.content);
 
     
@@ -74,19 +86,7 @@ class NavBar extends HTMLElement {
       
      
 
-//this method is for reponsiveness of navbar
- myFunction(){
-   console.log(this.textContent)
-  var x = this.shadowRoot.getElementById("myTopnav");
-  if (x.className === "topnav") {
-    x.className += " responsive";
-  } else {
-    x.className = "topnav";
-  }
 
-     
-     
-}
 }
 
 customElements.define('nav-bar',NavBar);
