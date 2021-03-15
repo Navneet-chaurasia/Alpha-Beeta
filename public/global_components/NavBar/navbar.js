@@ -46,7 +46,7 @@ class NavBar extends HTMLElement {
 
                   
             <div class="topnav" id="myTopnav">
-            <a href="#home" class="active" style="font-weight:bold">`+title+`</a>
+            <a href="../" class="active" style="font-weight:bold">`+title+`</a>
             <div id="menu-options">
             <a href="#">Leaderboard</a>
             <a href="#">Top-Games</a>
