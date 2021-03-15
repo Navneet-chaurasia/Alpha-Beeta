@@ -10,6 +10,6 @@ A game website where you can play number of games.
 4. npm run wonderGames
 5. above four commands are enough to launch project in local server
 
-
+### If any contributor wants to know how to write code(for this repo) then consult wiki pages
 
 ### WonderGames is a Open Source project. Feel free to contribute. All PRs are welcome.

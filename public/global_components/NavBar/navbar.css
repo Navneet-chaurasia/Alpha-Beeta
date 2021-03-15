@@ -1,6 +1,6 @@
 .topnav {
   overflow: hidden;
-  background-color: #333;
+  background-color:black;
 }
 
 .topnav a {
@@ -13,8 +13,12 @@
   font-size: 17px;
 }
 
+#menu-options{
+  float: right;
+  margin-right: 50px;
+}
 .active {
-  background-color: #4CAF50;
+  background-color: red;
   color: white;
 }
 
@@ -71,6 +75,9 @@
 }
 
 @media screen and (max-width: 600px) {
+  #menu-options{
+    float: none;
+  }
   .topnav a:not(:first-child), .dropdown .dropbtn {
     display: none;
   }
@@ -81,6 +88,9 @@
 }
 
 @media screen and (max-width: 600px) {
+  #menu-options{
+    float: none;
+  }
   .topnav.responsive {position: relative;}
   .topnav.responsive .icon {
     position: absolute;

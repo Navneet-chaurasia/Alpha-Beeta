@@ -1,4 +1,6 @@
 
+//documenation can be found in wiki page 
+//consult repo/wiki
 
 var shadow;
  //this method is for reponsiveness of navbar
@@ -39,16 +41,17 @@ class NavBar extends HTMLElement {
 
         headerTemplate.innerHTML = `
        
-          <link rel="stylesheet" href="global_components/NavBar/navbar.css">
+          <link rel="stylesheet" href="../global_components/NavBar/navbar.css">
           
 
                   
             <div class="topnav" id="myTopnav">
-            <a href="#home" class="active">Home</a>
-            <a href="#news">News</a>
-            <a href="#contact">Contact</a>
+            <a href="#home" class="active" style="font-weight:bold">`+title+`</a>
+            <div id="menu-options">
+            <a href="#">Leaderboard</a>
+            <a href="#">Top-Games</a>
             <div class="dropdown">
-              <button class="dropbtn">Dropdown 
+              <button class="dropbtn">Settings
                 <i class="fa fa-caret-down"></i>
               </button>
               <div class="dropdown-content">
@@ -57,8 +60,9 @@ class NavBar extends HTMLElement {
                 <a href="#">Link 3</a>
               </div>
             </div> 
-            <a href="#about">About</a>
-            <a href="javascript:void(0);" style="font-size:15px;" class="icon" onclick='myFunction()'>  &#9776;</a>
+            <a href="/profile/profile.html">Profile</a>
+            </div>
+            <a href="javascript:void(0);" style="font-size:20px;" class="icon" onclick='myFunction()'>  &#9776;</a>
             </div>
 
             
