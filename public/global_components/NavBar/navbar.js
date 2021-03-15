@@ -1,4 +1,6 @@
 
+//documenation can be found in wiki page 
+//consult repo/wiki
 
 var shadow;
  //this method is for reponsiveness of navbar
