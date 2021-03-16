@@ -5,19 +5,40 @@
 import { Auth } from "/modules/database/firebase_db/db.js";
 
 
-
 export class AuthStatus extends HTMLElement{
     
     constructor(){
-
-        Auth.isLoggedin();
-        super();
+         super();
+    }
+     
+    
+    //signin method
+    static  signIn(){
+        Auth.signIn();
     }
 
     connectedCallback(){
       
-     
-       this.innerHTML = `<a href="#">Login</a>`;
+        var text;
+        if(!Auth.isLoggedIn().then((t)=>t)){
+           
+            text = "Login";
+        }
+        else{
+           Auth.getUserData().then((d)=>{
+            console.log(d);
+            text = d.name;
+            });
+            
+          
+        }
+       this.innerHTML = `
+       <style>
+       a:hover{
+           cursor:pointer
+       }
+       </style>
+       <a onclick="signIn()">`+text+`</a>`;
 
         }
 }
