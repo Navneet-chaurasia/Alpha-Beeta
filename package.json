@@ -1,5 +1,5 @@
 {
-  "name": "WonderGames",
+  "name": "wondergames",
   "version": "1.0.0",
   "description": "A java script game website where you can play number of games\r ## Website can be seen at https://alpha-beeta.web.app/",
   "main": "index.html",
@@ -20,6 +20,7 @@
   },
   "homepage": "https://github.com/Navneet-chaurasia/WonderGames#readme",
   "dependencies": {
+    "firebase": "^8.3.0",
     "http-server": "^0.12.3"
   }
 }

@@ -7,7 +7,7 @@ A game website where you can play number of games.
 1. clone the project in local repo (git clone repo-url)
 2. cd wonderGames
 3. npm install
-4. npm run wonderGames
+4. firebase serve --only hosting
 5. above four commands are enough to launch project in local server
 
 ### If any contributor wants to know how to write code(for this repo) then consult wiki pages
