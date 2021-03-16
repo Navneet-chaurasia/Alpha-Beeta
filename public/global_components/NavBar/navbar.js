@@ -1,21 +1,7 @@
 import { AuthStatus } from "/global_components/authStatus/authStatus.js";
+
 //documenation can be found in wiki page 
 //consult repo/wiki
-
-var shadow;
- //this method is for reponsiveness of navbar
- export function myFunction(){
-  
- var x = shadow.getElementById('myTopnav');
- if (x.className === "topnav") {
-   x.className += " responsive";
- } else {
-   x.className = "topnav";
- }
-
-    
-    
-}
 
 
 
@@ -23,14 +9,16 @@ export class NavBar extends HTMLElement {
 
     constructor() {
         super();
+       
       }
        
 
+    
       //shadow root for navbar element
 
       connectedCallback() {
    
-        const headerTemplate = document.createElement('template');
+       
         var title;
         if(this.hasAttribute('title')) {
           title = this.getAttribute('title');
@@ -39,14 +27,14 @@ export class NavBar extends HTMLElement {
         }
 
 
-        headerTemplate.innerHTML = `
+       this.innerHTML = `
        
           <link rel="stylesheet" href="../global_components/NavBar/navbar.css">
                  
             <div class="topnav" id="myTopnav">
             <a href="../" class="active" style="font-weight:bold">`+title+`</a>
             <div id="menu-options">
-            <a href="#">Leaderboard</a>
+            <a href="#" >Leaderboard</a>
             <a href="#">Top-Games</a>
             <div class="dropdown">
               <button class="dropbtn">Settings
@@ -61,17 +49,12 @@ export class NavBar extends HTMLElement {
           
             <auth-status></auth-status>
             </div>
-            <a href="javascript:void(0);" style="font-size:20px;" class="icon" onclick='myFunction()'>  &#9776;</a>
+            <a href="javascript:void(0);" style="font-size:20px;" class="icon" onclick="showResponsiveNavbar()">  &#9776;</a>
             </div>
 
             
 
         `;
-
-
-      shadow = this.attachShadow({ mode: 'open' });
-      
-    shadow.appendChild(headerTemplate.content);
 
     
       }

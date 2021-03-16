@@ -9,36 +9,45 @@ export class AuthStatus extends HTMLElement{
     
     constructor(){
          super();
-    }
-     
+       
+       }
     
-    //signin method
-    static  signIn(){
-        Auth.signIn();
-    }
 
     connectedCallback(){
-      
-        var text;
-        if(!Auth.isLoggedIn().then((t)=>t)){
-           
-            text = "Login";
+ 
+       firebase.auth().onAuthStateChanged(user => {
+
+        if(user){
+
+            var userData = Auth.getUserData();
+
+           this.innerHTML = `<style>
+           a:hover{
+               cursor:pointer
+           }
+           img{
+               border-radius:50px;
+               margin-top:5px;
+               width:40px;
+           }
+           #profileImage{
+               padding:0px;
+               margin:0px;
+             
+           }
+           </style>
+            <a href="/profile/profile.html">`+userData.name+`</a><a id="profileImage"><img src="`+userData.profileImage+`"></a>`;
+        }else{
+                this.innerHTML = `<style>
+                a:hover{
+                    cursor:pointer
+                }
+                </style>
+                <a onclick="signIn()">`+"Login"+`</a>`;
         }
-        else{
-           Auth.getUserData().then((d)=>{
-            console.log(d);
-            text = d.name;
-            });
+       })
             
-          
-        }
-       this.innerHTML = `
-       <style>
-       a:hover{
-           cursor:pointer
-       }
-       </style>
-       <a onclick="signIn()">`+text+`</a>`;
+         
 
         }
 }
