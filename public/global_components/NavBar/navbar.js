@@ -1,10 +1,10 @@
-
+import { AuthStatus } from "/global_components/authStatus/authStatus.js";
 //documenation can be found in wiki page 
 //consult repo/wiki
 
 var shadow;
  //this method is for reponsiveness of navbar
- function myFunction(){
+ export function myFunction(){
   
  var x = shadow.getElementById('myTopnav');
  if (x.className === "topnav") {
@@ -19,7 +19,7 @@ var shadow;
 
 
 
-class NavBar extends HTMLElement {
+export class NavBar extends HTMLElement {
 
     constructor() {
         super();
@@ -42,9 +42,7 @@ class NavBar extends HTMLElement {
         headerTemplate.innerHTML = `
        
           <link rel="stylesheet" href="../global_components/NavBar/navbar.css">
-          
-
-                  
+                 
             <div class="topnav" id="myTopnav">
             <a href="../" class="active" style="font-weight:bold">`+title+`</a>
             <div id="menu-options">
@@ -60,7 +58,8 @@ class NavBar extends HTMLElement {
                 <a href="#">Link 3</a>
               </div>
             </div> 
-            <a href="/profile/profile.html">Profile</a>
+          
+            <auth-status></auth-status>
             </div>
             <a href="javascript:void(0);" style="font-size:20px;" class="icon" onclick='myFunction()'>  &#9776;</a>
             </div>

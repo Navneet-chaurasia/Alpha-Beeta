@@ -1,4 +1,17 @@
-const footerTemplate = document.createElement('template');
+
+
+
+var shadow;
+
+
+class Footer extends HTMLElement {
+  constructor() {
+    super();
+  }
+
+  connectedCallback() {
+
+    const footerTemplate = document.createElement('template');
 footerTemplate.innerHTML = `
   <style>
     footer {
@@ -50,14 +63,9 @@ footerTemplate.innerHTML = `
   </footer>
 `;
 
-class Footer extends HTMLElement {
-  constructor() {
-    super();
-  }
 
-  connectedCallback() {
-    const shadowRoot = this.attachShadow({ mode: 'closed' });
-    shadowRoot.appendChild(footerTemplate.content);
+     shadow = this.attachShadow({ mode: 'open' });
+      shadow.appendChild(footerTemplate.content);
   }
 }
 
